@@ -1,0 +1,39 @@
+--- mlkit-4.1.1/src/Tools/Rp2ps/Makefile~	2001-02-19 22:57:46.000000000 +0100
++++ mlkit-4.1.1/src/Tools/Rp2ps/Makefile	2002-10-29 11:23:28.000000000 +0100
+@@ -4,10 +4,12 @@
+ OFILES = Rp2Ps.o ProfileData.o Sample.o Graph.o Curves.o Output.o PostScript.o Error.o Alloc.o
+ CFILES = $(OFILES:%.o=%.c)
+ 
++OPT=-03
++
+ .PHONY: clean depend
+ 
+ %.o: %.c
+-	gcc -c -O3 -o $*.o $<
++	gcc -c $(OPT) -o $*.o $<
+ 
+ all: ../../../bin/rp2ps
+ 
+--- mlkit-4.1.1/src/Runtime/Makefile~	2002-08-24 23:58:19.000000000 +0200
++++ mlkit-4.1.1/src/Runtime/Makefile	2002-10-29 11:24:51.000000000 +0100
+@@ -36,7 +36,7 @@
+ 	gcc -c -DPROFILING $(OPT) -o $*-p.o $< 
+ 
+ %-gc.o: %.c
+-	gcc -c -g -DTAG_VALUES -DENABLE_GC $(OPT) -o $*-gc.o $<
++	gcc -c -DTAG_VALUES -DENABLE_GC $(OPT) -o $*-gc.o $<
+ 
+ %-gc-p.o: %.c
+ 	gcc -c -DTAG_VALUES -DPROFILING -DENABLE_GC $(OPT) -o $*-gc-p.o $<
+--- mlkit-4.1.1/src/heap2exec/runtime/objs/mk.x86-linux~	2001-01-27 06:36:53.000000000 +0100
++++ mlkit-4.1.1/src/heap2exec/runtime/objs/mk.x86-linux	2002-10-29 11:47:41.000000000 +0100
+@@ -5,7 +5,8 @@
+ 
+ MAKE =		make
+ CC =		gcc -ansi
+-CFLAGS =	-O2
++OPT =           -O2
++CFLAGS =	$(OPT)
+ CPP =		gcc -x c -E -P -ansi
+ #XOBJS =	xmonitor.o
+ #LD_LIBS =	-lX11
