@@ -12,12 +12,12 @@ URL:		http://www.it.edu/research/mlkit/
 BuildRequires:	smlnj = 110.0.7
 Requires:	%{name}-common = %{version}
 ExclusiveArch:	%{ix86}
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # don't strip heap images
 %define		no_install_post_strip 1
 
-%description 
+%description
 The ML Kit (henceforth refered to as the Kit) is a compiler for the
 programming language Standard ML. The Kit covers all of Standard ML,
 as defined in the 1997 edition of the Definition of Standard ML and
@@ -51,7 +51,7 @@ Summary(pl):	Kompilator Standard ML do przenosnego kodu bajtowego
 Group:		Development/Languages
 Requires:	%{name}-common = %{version}
 
-%description kam 
+%description kam
 The ML Kit (henceforth refered to as the Kit) is a compiler for the
 programming language Standard ML. The Kit covers all of Standard ML,
 as defined in the 1997 edition of the Definition of Standard ML and
