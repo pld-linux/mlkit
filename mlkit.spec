@@ -1,11 +1,12 @@
 Summary:	A Standard ML native compiler
 Summary(pl):	Kompilator Standard ML do kodu maszynowego x86
 Name:		mlkit
-Version:	4.0.0
+Version:	4.1.1
 Release:	1
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.it.edu/research/mlkit/dist/%{name}-%{version}.tgz
+Patch0:		%{name}-OPT.patch
 URL:		http://www.it.edu/research/mlkit
 BuildRequires:	smlnj = 110.0.7
 Requires:	%{name}-common = %{version}
@@ -92,16 +93,19 @@ Zainstaluj pakiety mlkit lub mlkit-kam dla pe³nego systemu ML Kit.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%{__make} mlkit
-%{__make} mlkit_kam
+%{__make} mlkit \
+	OPT="%{optflags}"
+%{__make} mlkit_kam \
+	OPT="%{optflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_libdir}/mlkit/bin,%{_bindir},%{_examplesdir}}
-install bin/{runtimeSystem*.o,kam} $RPM_BUILD_ROOT%{_libdir}/mlkit/bin
+install bin/{runtimeSystem*.a,kam} $RPM_BUILD_ROOT%{_libdir}/mlkit/bin
 install bin/mlkit{,_kam}.x86-linux $RPM_BUILD_ROOT%{_libdir}/mlkit/bin
 install bin/rp2ps $RPM_BUILD_ROOT%{_bindir}
 cp -a basislib ml-yacc-lib $RPM_BUILD_ROOT%{_libdir}/mlkit
@@ -126,7 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mlkit
 %attr(755,root,root) %{_libdir}/mlkit/bin/mlkit.x86-linux
 %attr(755,root,root) %{_libdir}/mlkit/bin/rp2ps
-%{_libdir}/mlkit/bin/runtimeSystem*.o
+%{_libdir}/mlkit/bin/runtimeSystem*.a
 
 %files kam
 %defattr(644,root,root,755)
