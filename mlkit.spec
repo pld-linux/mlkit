@@ -97,9 +97,9 @@ Zainstaluj pakiety mlkit lub mlkit-kam dla pe³nego systemu ML Kit.
 
 %build
 %{__make} mlkit \
-	OPT="%{optflags}"
+	OPT="%{rpmcflags}"
 %{__make} mlkit_kam \
-	OPT="%{optflags}"
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
