@@ -8,7 +8,7 @@ Group:		Development/Languages
 Source0:	http://www.it.edu/research/mlkit/dist/%{name}-%{version}.tgz
 # Source0-md5:	fc76e18d0e2201bea92344f6e1e1e5cd
 Patch0:		%{name}-OPT.patch
-URL:		http://www.it.edu/research/mlkit
+URL:		http://www.it.edu/research/mlkit/
 BuildRequires:	smlnj = 110.0.7
 Requires:	%{name}-common = %{version}
 ExclusiveArch:	%{ix86}
