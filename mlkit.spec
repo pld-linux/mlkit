@@ -5,7 +5,7 @@ Version:	4.0.0
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Source0:	http://www.it.edu/research/mlkit/download/%{name}-%{version}.tgz
+Source0:	http://www.it.edu/research/mlkit/dist/%{name}-%{version}.tgz
 URL:		http://www.it.edu/research/mlkit
 BuildRequires:	smlnj = 110.0.7
 Requires:	%{name}-common = %{version}
