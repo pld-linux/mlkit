@@ -1,5 +1,5 @@
 Summary:	A Standard ML native compiler
-Summary(pl):	Kompilator Standard ML do kodu maszynowego x86
+Summary(pl.UTF-8):   Kompilator Standard ML do kodu maszynowego x86
 Name:		mlkit
 Version:	4.1.1
 Release:	1
@@ -32,22 +32,22 @@ plus the Basis Library).
 This package provides version of compiler which generates effective x86
 machine code.
 
-%description -l pl
-ML Kit jest kompilatorem dla jêzyka programowania Standard ML. ML Kit
-obejmuje kompletny standard SML 97 i wspiera wiêkszo¶æ standardowej
-biblioteki SML (Standard ML Basis Library). ML Kit u¿ywa schematu
-zarz±dzania pamiêci± bazuj±cego na regionach, w którym operacje alokacji
-i dealokacji s± dodawane do programu w trakcie kompilacji. ML Kit umo¿liwia
-tak¿e ³±czenie zarz±dzania pamiêci± opartego na regionach ze standardowym
-od¶miecaniem ze zliczaniem referencji. Najwiêkszym programem skompilowanym
-przez ML Kit jest on sam (oko³o 80000 linii SML plus biblioteka standardowa).
+%description -l pl.UTF-8
+ML Kit jest kompilatorem dla jÄ™zyka programowania Standard ML. ML Kit
+obejmuje kompletny standard SML 97 i wspiera wiÄ™kszoÅ›Ä‡ standardowej
+biblioteki SML (Standard ML Basis Library). ML Kit uÅ¼ywa schematu
+zarzÄ…dzania pamiÄ™ciÄ… bazujÄ…cego na regionach, w ktÃ³rym operacje alokacji
+i dealokacji sÄ… dodawane do programu w trakcie kompilacji. ML Kit umoÅ¼liwia
+takÅ¼e Å‚Ä…czenie zarzÄ…dzania pamiÄ™ciÄ… opartego na regionach ze standardowym
+odÅ›miecaniem ze zliczaniem referencji. NajwiÄ™kszym programem skompilowanym
+przez ML Kit jest on sam (okoÅ‚o 80000 linii SML plus biblioteka standardowa).
 
-Pakiet tez zawiera wersjê kompilatora generuj±c± efektywny kod dla maszyn
+Pakiet tez zawiera wersjÄ™ kompilatora generujÄ…cÄ… efektywny kod dla maszyn
 x86.
 
 %package kam
 Summary:	A Standard ML bytecode compiler
-Summary(pl):	Kompilator Standard ML do przenosnego kodu bajtowego
+Summary(pl.UTF-8):   Kompilator Standard ML do przenosnego kodu bajtowego
 Group:		Development/Languages
 Requires:	%{name}-common = %{version}
 
@@ -66,31 +66,31 @@ plus the Basis Library).
 This package provides version of compiler which generates portable bytecode
 that can be interpreted by an abstract machine.
 
-%description kam -l pl
-ML Kit jest kompilatorem dla jêzyka programowania Standard ML. ML Kit
-obejmuje kompletny standard SML 97 i wspiera wiêkszo¶æ standardowej
-biblioteki SML (Standard ML Basis Library). ML Kit u¿ywa schematu
-zarz±dzania pamiêci± bazuj±cego na regionach, w którym operacje alokacji
-i dealokacji s± dodawane do programu w trakcie kompilacji. ML Kit umo¿liwia
-tak¿e ³±czenie zarz±dzania pamiêci± opartego na regionach ze standardowym
-od¶miecaniem ze zliczaniem referencji. Najwiêkszym programem skompilowanym
-przez ML Kit jest on sam (oko³o 80000 linii SML plus biblioteka standardowa).
+%description kam -l pl.UTF-8
+ML Kit jest kompilatorem dla jÄ™zyka programowania Standard ML. ML Kit
+obejmuje kompletny standard SML 97 i wspiera wiÄ™kszoÅ›Ä‡ standardowej
+biblioteki SML (Standard ML Basis Library). ML Kit uÅ¼ywa schematu
+zarzÄ…dzania pamiÄ™ciÄ… bazujÄ…cego na regionach, w ktÃ³rym operacje alokacji
+i dealokacji sÄ… dodawane do programu w trakcie kompilacji. ML Kit umoÅ¼liwia
+takÅ¼e Å‚Ä…czenie zarzÄ…dzania pamiÄ™ciÄ… opartego na regionach ze standardowym
+odÅ›miecaniem ze zliczaniem referencji. NajwiÄ™kszym programem skompilowanym
+przez ML Kit jest on sam (okoÅ‚o 80000 linii SML plus biblioteka standardowa).
 
-Pakiet tez zawiera wersjê kompilatora generuj±c± przeno¶ny kod bajtowy który
-mo¿e byæ interpretowany przez maszynê wirtualn±
+Pakiet tez zawiera wersjÄ™ kompilatora generujÄ…cÄ… przenoÅ›ny kod bajtowy ktÃ³ry
+moÅ¼e byÄ‡ interpretowany przez maszynÄ™ wirtualnÄ…
 
 %package common
 Summary:	Common files for ML Kit bytecode and native compilers
-Summary(pl):	Pliki wspólne dla kompilatora natywnego i kodu bajtowego ML Kit
+Summary(pl.UTF-8):   Pliki wspÃ³lne dla kompilatora natywnego i kodu bajtowego ML Kit
 Group:		Development/Languages
 
 %description common
 Common files for ML Kit bytecode and native compilers.
 Install mlkit or mlkit-kam packages for full ML Kit system.
 
-%description common -l pl
-Pliki wspólne dla kompilatora natywnego i kodu bajtowego ML Kit.
-Zainstaluj pakiety mlkit lub mlkit-kam dla pe³nego systemu ML Kit.
+%description common -l pl.UTF-8
+Pliki wspÃ³lne dla kompilatora natywnego i kodu bajtowego ML Kit.
+Zainstaluj pakiety mlkit lub mlkit-kam dla peÅ‚nego systemu ML Kit.
 
 %prep
 %setup -q
