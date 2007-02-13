@@ -1,5 +1,5 @@
 Summary:	A Standard ML native compiler
-Summary(pl.UTF-8):   Kompilator Standard ML do kodu maszynowego x86
+Summary(pl.UTF-8):	Kompilator Standard ML do kodu maszynowego x86
 Name:		mlkit
 Version:	4.1.1
 Release:	1
@@ -47,7 +47,7 @@ x86.
 
 %package kam
 Summary:	A Standard ML bytecode compiler
-Summary(pl.UTF-8):   Kompilator Standard ML do przenosnego kodu bajtowego
+Summary(pl.UTF-8):	Kompilator Standard ML do przenosnego kodu bajtowego
 Group:		Development/Languages
 Requires:	%{name}-common = %{version}
 
@@ -81,7 +81,7 @@ może być interpretowany przez maszynę wirtualną
 
 %package common
 Summary:	Common files for ML Kit bytecode and native compilers
-Summary(pl.UTF-8):   Pliki wspólne dla kompilatora natywnego i kodu bajtowego ML Kit
+Summary(pl.UTF-8):	Pliki wspólne dla kompilatora natywnego i kodu bajtowego ML Kit
 Group:		Development/Languages
 
 %description common
