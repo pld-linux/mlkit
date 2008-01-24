@@ -15,6 +15,7 @@ ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # don't strip heap images
+# TODO: use _noautostrip
 %define		no_install_post_strip 1
 
 %description
