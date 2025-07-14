@@ -95,7 +95,7 @@ Zainstaluj pakiety mlkit lub mlkit-kam dla pełnego systemu ML Kit.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} mlkit \
